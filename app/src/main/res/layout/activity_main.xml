@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#b0d7da"
+        app:layout_constraintBottom_toTopOf="@+id/touch_nav_layout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:text="文本"/>
+    </FrameLayout>
+
+
+    <com.angcyo.qqtabnavdemo.TouchMoveGroupLayout
+        android:id="@+id/touch_nav_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#E0E0FF"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.angcyo.qqtabnavdemo.TouchMoveView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:r_image_normal="@drawable/skin_tab_icon_conversation_normal"
+            app:r_image_selected="@drawable/skin_tab_icon_conversation_selected"
+            app:r_sub_image_normal="@drawable/skin_tab_icon_conversation_sub_normal"
+            app:r_sub_image_selected="@drawable/skin_tab_icon_conversation_sub_selected"
+            app:r_text_selected="消息"/>
+
+        <com.angcyo.qqtabnavdemo.TouchMoveView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:r_image_normal="@drawable/skin_tab_icon_contact_normal"
+            app:r_image_selected="@drawable/skin_tab_icon_contact_selected"
+            app:r_sub_image_normal="@drawable/skin_tab_icon_contact_sub_normal"
+            app:r_sub_image_selected="@drawable/skin_tab_icon_contact_sub_selected"
+            app:r_text_normal="联系人"
+            app:r_text_selected="联系人"/>
+
+        <com.angcyo.qqtabnavdemo.TouchMoveView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:r_image_normal="@drawable/skin_tab_icon_plugin_normal"
+            app:r_image_selected="@drawable/skin_tab_icon_plugin_selected"
+            app:r_sub_image_selected="@drawable/skin_tab_icon_plugin_sub_selected"
+            app:r_text_normal="动态"/>
+    </com.angcyo.qqtabnavdemo.TouchMoveGroupLayout>
+
+</android.support.constraint.ConstraintLayout>
